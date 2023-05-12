@@ -9,6 +9,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:manipulacao_json/model/FilmeModel.dart';
 import '../main.dart';
 
+//Widget para criar tabela
 Widget createDataTable(List<String> keys, List<dynamic> values) {
   List<DataColumn> columns = [
     DataColumn(label: Text('aas')),
@@ -43,8 +44,6 @@ class DetalhesFilmePage extends StatefulWidget {
 }
 
 class _DetalhesFilmePageState extends State<DetalhesFilmePage> {
-  bool _favorito = false;
-
   Map<String, dynamic> _movie = {};
 
   List<Map<String, dynamic>> _foundProducts = [];

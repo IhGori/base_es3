@@ -143,9 +143,13 @@ class _FilmePageState extends State<FilmePage> {
                   style: TextStyle(fontSize: 16),
                 ),
                 replacement: ListView.builder(
+                  //Define o número de itens que devem ser ciados na lista com base no tamanho do alfabeto
                   itemCount: alphabet.length,
+                  //Cria um construtor de itens para a lista, onde recebe como parâmetros o contexto que o widget está sendo criado e o índice do item a ser criado
                   itemBuilder: (BuildContext context, int index) {
+                    //Obtém a letra do alfabeto correspondente ao índice atual
                     final letter = alphabet[index];
+                    //Filtra de acordo com aqueles encontrados que começam com a letra
                     final productsStartingWithLetter = _foundMovie
                         .where((product) =>
                             product['nome_filme'].startsWith(letter))
